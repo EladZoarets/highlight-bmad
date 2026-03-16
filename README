@@ -34,14 +34,3 @@ Preference boosts
 
 python src/highlight_selector.py
 
-## Project Structure
-
-docs/
-  agents.md
-  validation.md
-
-src/
-  highlight_selector.py
-
-data/
-  sample_input.json
