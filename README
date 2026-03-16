@@ -1,0 +1,37 @@
+# Highlight Selection – BMAD Approach
+
+This project implements the same highlight selection feature using a BMAD (agent-driven AI workflow).
+
+The implementation was generated through an iterative AI-assisted workflow.
+
+This repository is part of the Generative AI Evangelist assignment.
+
+## Scoring Rules
+
+Base scores:
+
+- goal = 4
+- assist = 3
+- card = 1
+
+Preference boosts:
+
+- favorite player +8
+- favorite team +5
+
+## Architecture
+
+Events Input  
+↓  
+Scoring Engine  
+↓  
+Filtering  
+↓  
+Sorting  
+↓  
+Highlights Output  
+
+## Run
+
+```bash
+python src/highlight_selector.py
