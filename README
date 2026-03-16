@@ -1,23 +1,50 @@
-# Highlight Selection – BMAD Approach
 
-This project implements the same highlight selection feature using a **BMAD (agent-driven AI workflow)** approach.
+---
 
-The implementation was produced through an iterative AI-assisted workflow.
+# `highlight-bmad/README.md`
 
-This repository is part of the Generative AI Evangelist assignment.
+```markdown
+# Highlight Selection – BMAD (Agent-Driven) Approach
+
+This project implements the same highlight selection feature using a **BMAD (agent-driven AI workflow)**.
+
+Instead of starting with strict documentation, the implementation was produced through an **iterative AI-assisted workflow**.
+
+This repository is part of the **Generative AI Evangelist assignment**.
+
+---
+
+## Problem
+
+Select the most relevant football match highlights based on event data and user preferences.
+
+Input:
+
+- match events
+- user preference
+
+Output:
+
+- ranked highlights
+- score
+- reasoning
+
+---
 
 ## Scoring Rules
 
-Base scores
+Base scores:
 
-- goal = 4
-- assist = 3
-- card = 1
+- goal = 4  
+- assist = 3  
+- card = 1  
 
-Preference boosts
+Preference boosts:
 
-- favorite player +8
-- favorite team +5
+- favorite player +8  
+- favorite team +5  
+
+---
 
 ## Architecture
 
@@ -31,18 +58,9 @@ Sorting
 ↓  
 Highlights Output  
 
+---
+
 ## Run
 
+```bash
 python src/highlight_selector.py
-
-## Project Structure
-
-docs/
-- agents.md
-- validation.md
-
-src/
-- highlight_selector.py
-
-data/
-- sample_input.json
