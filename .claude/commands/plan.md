@@ -21,6 +21,10 @@ Steps:
 - Order tasks logically
 - Ensure tasks are small and implementable
 
+Output:
+- Save the plan to iterations/bmad/{project-name}-plan.md
+- Read the assignment spec from docs/assignment.md and docs/agents.md before planning
+
 Definition of Done:
 - feature summary
 - technical approach
