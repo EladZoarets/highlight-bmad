@@ -1,0 +1,64 @@
+{
+  "preferences": {
+    "favorite_player": "Messi",
+    "favorite_team": "Barcelona"
+  },
+  "events": [
+    {
+      "id": "e1",
+      "type": "goal",
+      "player": "Messi",
+      "team": "Barcelona",
+      "minute": 23
+    },
+    {
+      "id": "e2",
+      "type": "assist",
+      "player": "Xavi",
+      "team": "Barcelona",
+      "minute": 23
+    },
+    {
+      "id": "e3",
+      "type": "yellow_card",
+      "player": "Ramos",
+      "team": "Real Madrid",
+      "minute": 35
+    },
+    {
+      "id": "e4",
+      "type": "save",
+      "player": "Casillas",
+      "team": "Real Madrid",
+      "minute": 41
+    },
+    {
+      "id": "e5",
+      "type": "red_card",
+      "player": "Pepe",
+      "team": "Real Madrid",
+      "minute": 67
+    },
+    {
+      "id": "e6",
+      "type": "goal",
+      "player": "Ronaldo",
+      "team": "Real Madrid",
+      "minute": 72
+    },
+    {
+      "id": "e7",
+      "type": "goal",
+      "player": "Messi",
+      "team": "Barcelona",
+      "minute": 88
+    },
+    {
+      "id": "e8",
+      "type": "offside_trap",
+      "player": "Puyol",
+      "team": "Barcelona",
+      "minute": 55
+    }
+  ]
+}
