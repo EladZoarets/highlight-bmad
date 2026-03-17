@@ -32,19 +32,21 @@ def score_event(event, preference):
         score += 5
     return score
 
-
 def build_reason(event, preference):
     preference = preference or {}
     parts = []
     if _match(event.get("player"), preference.get("favorite_player")):
-        parts.append("favorite player involved")
+        parts.append("Favorite player")
     if _match(event.get("team"), preference.get("favorite_team")):
-        parts.append("favorite team")
+        parts.append("Favorite team")
     event_type = _norm(event.get("type"))
-    if event_type in EVENT_SCORES:
-        parts.append(f"{event_type} event")  # already normalized to lowercase
-    return ", ".join(parts) if parts else "relevant event"
-
+    if event_type == "goal":
+        parts.append("Goal")
+    elif event_type == "assist":
+        parts.append("Assist")
+    elif event_type == "card":
+        parts.append("Card")
+    return ", ".join(parts)
 
 def select_highlights(events, preference):
     results = []
