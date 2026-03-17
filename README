@@ -32,5 +32,5 @@ Preference boosts
 
 ## Run
 
-python src/highlight_selector.py
+python3 src/highlight_selector.py
 

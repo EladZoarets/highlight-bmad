@@ -1,13 +1,69 @@
-# Validation — AI Highlight Selector
+# Validation: AI Highlight Selector (BMAD)
 
-## Purpose
+## Test 1 – Full Preference
 
-This document validates that the BMAD implementation matches the canonical feature contract used in the Spec Kit track.
+```json
+{
+  "input": {
+    "events": [
+      { "type": "goal", "player": "Messi", "team": "Inter Miami" },
+      { "type": "assist", "player": "Messi", "team": "Inter Miami" }
+    ],
+    "preference": {
+      "favorite_player": "Messi",
+      "favorite_team": "Inter Miami"
+    }
+  },
+  "output": [
+    { "score": 17 },
+    { "score": 16 }
+  ],
+  "result": "Correct scoring and ranking"
+}
+```
 
-The goal is not only to confirm that the code runs.
-The goal is to confirm that the BMAD version implements the exact same feature behavior.
+## Test 2 – Empty Preference
 
-## Run
+```json
+{
+  "input": {
+    "events": [
+      { "type": "goal" },
+      { "type": "card" }
+    ],
+    "preference": {}
+  },
+  "output": [
+    { "score": 4 },
+    { "score": 1 }
+  ],
+  "result": "Falls back to event-type scoring"
+}
+```
 
-```bash
-python3 src/highlight_selector.py
+## Test 3 – Missing Fields
+
+```json
+{
+  "input": {
+    "events": [
+      { "type": "goal" },
+      { "type": "assist", "team": "Inter Miami" }
+    ],
+    "preference": {
+      "favorite_team": "Inter Miami"
+    }
+  },
+  "output": [
+    { "score": 8 },
+    { "score": 4 }
+  ],
+  "result": "Handles missing fields without failure"
+}
+```
+
+## Conclusion
+
+The implementation behaves correctly across core and edge scenarios.
+
+Validation was required to confirm behavior not explicitly defined during generation.
